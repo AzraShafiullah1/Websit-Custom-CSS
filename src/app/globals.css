@@ -1,42 +1,283 @@
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
-html,
 body {
-  max-width: 100vw;
-  overflow-x: hidden;
+    font-family: Arial,sans-serif;
+    background-color: #f4f4f49b;
+    color:#333
 }
-
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-* {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
-}
-
+/* text style*/
 a {
-  color: inherit;
-  text-decoration: none;
+    text-decoration: none;
+    color:#333
+}
+h1 ,h2,h3{
+    font-weight: bold;
+}
+/* header style*/
+.header {
+    background-color: #8a0b79;
+    color: white;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header .logo {
+    font-size: 24px;
+    color:white
+}
+.header nav {
+    display: flex;
+    gap: 40px;
+}
+.header nav a {
+    color: white;
+    font-weight: bold;
+}
+.header nav a:hover {
+    text-decoration: underline;
+}
+/*Footer style*/
+footer {
+background-color:#222;
+color: white;
+text-align: center;
+padding: 5px;
+}
+footer p {
+    margin: 0;
+}
+/*home page style*/
+
+    .hero {
+        background-size: cover;
+        background-position: center;
+        height: 100vh;
+        display: flex;
+        justify-content: left;
+        align-items: center;
+        text-align: center;
+        color: white;
+        padding-left: 60px;
+
+ }
+ .hero h1 {
+    font-size: 58px;
+    text-shadow: 2px 2px 5px rgb(0,0,0,0.5);
+ 
+}
+/* Home Style*/
+.hero {
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display:flex;
+    justify-content: left;
+    align-items: center;
+    text-align: center;
+    color:white;
+    padding-left: 60px;
+}
+.hero h1 {
+    font-size: 58px;
+    text-shadow: 2px 2px 5px rgb(0,0,0,0.5);
+}
+.hero p {
+    font-size: 30px;
+    margin-top: 10px;
+}
+.hero button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #af0c8c;
+    color: white;
+    border: none;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.hero button:hover {
+    background-color: #690c5d;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
+/*About us */
+.about{
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 80px 20px;
+    display:flex;
+    justify-content: flex-start;
+    align-items: center;
+    height:100vh;
+    background-color: #333;
+    }
+    .about-content {
+        max-width: 300px;
+        text-align: left;
+        background:rgba(243, 136, 136, 0.6) ;
+        padding: 30px;
+        border-radius: 10px;
+    }
+    .about-content p {
+        padding-top: 20px;
+    }
+/*camera style*/
+.camera{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 20px;
+    margin-top: 30px;
+    margin: 80px;
 }
+
+.cameras-card {
+    width: 100%;
+    background-color: rgb(211, 191, 135);
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgb(15, 15, 15);
+    text-align: center;
+}
+
+.cameras-card image {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+.cameras-card h3 {
+    margin-top: 10px;
+
+}
+.cameras-card .price {
+    font-size: 20px;
+    font-weight: bold;
+    color: red;
+}
+.cameras-card button {
+    margin-top: 10px;
+    padding: 10px;
+    background-color: rgb(10, 82, 82);
+    color: azure;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.cameras-card button:hover{
+    background-color: #c73aa8;
+}
+.cameras-card image {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+.cameras-card:hover image {
+    transform: scale(1.8);
+}
+/*Contact style*/
+
+    .contact-form {
+        max-width: 600px;
+        margin: 50px auto;
+        padding: 20px;
+        background-color: white;
+        box-shadow: 0 0 10px rgb(0,0,0,0.1);
+        background-color: #84e8f5;
+} 
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.contact-form button {
+    padding: 10px 20px;
+    background-color: #b90f0f;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    
+}
+.contact-form:hover{
+    background-color: rgb(247, 166, 129);
+}
+/*fade-in */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+}
+ 100% {
+
+    opacity: 1;
+    transform: translateY(0);
+ }
+    
+}
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 1s ease-out forwards;
+}
+/*Responsive  Style*/
+@media (max-width: 768px) {
+    .header{
+        flex-direction: column;
+        text-align: center;
+    }
+    .header .logo {
+        margin-bottom: 10px;
+
+    }
+    .header nav {
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+    }
+    .hero{
+        height: 70vh;
+        padding: 20px;
+        text-align: center;
+    }
+    .hero h1 {
+        font-size: 35px;
+   }
+    .hero p {
+        font-size: 18px;
+
+    }
+    .hero button{
+        width: 100%;
+        padding: 12px;
+        font-size: 17px;
+ }
+ .cameras {
+    grid-template-columns: 1fr;
+    margin: 20px;
+ }
+ .about {
+    padding: 40px 20px;
+    height: auto;
+}
+.about-content {
+    width: 100%;
+    padding: 20px;
+    }
+    .contact-form {
+        margin: 20px;
+        padding: 20px;
+
+    }
+}
+
+
